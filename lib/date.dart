@@ -1,33 +1,20 @@
 import 'package:flutter/material.dart';
 
-class DateWidget extends StatelessWidget {
-  const DateWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Contoh Date Picker',
-      home: MyHomePage(title: 'Contoh Date Picker'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class DateWidget extends StatefulWidget {
+  const DateWidget({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<DateWidget> createState() => _DateWidgetState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _DateWidgetState extends State<DateWidget> {
   DateTime selectedDate = DateTime.now();
-
-  Future<void> _selectDate(BuildContext context) async {
+  Future<Null> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
-      context: context, 
-      initialDate: selectedDate, 
+      context: context,
+      initialDate: selectedDate,
       firstDate: DateTime(2023, 8),
       lastDate: DateTime(2101),
     );
@@ -40,30 +27,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text("${selectedDate.toLocal()}".split(' ')[0]),
-            SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {
-                _selectDate(context);
-                print(
+    return Center(
+      child: Column(
+        children: <Widget>[
+          Text("${selectedDate.toLocal()}".split(' ')[0]),
+          SizedBox(height: 20.0),
+          ElevatedButton(
+            onPressed: () {
+              _selectDate(context);
+              print(
                   '${selectedDate.day}-${selectedDate.month}-${selectedDate.year}');
-              },
-              child: Text('Pilih Tanggal'),
-            ),
-          ],
-        ),
+            },
+            child: Text('Pilih Tanggal'),
+          ),
+        ],
       ),
     );
   }
-}
-
-void main() {
-  runApp(const DateWidget());
 }

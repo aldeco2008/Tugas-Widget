@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:widget_1/column.dart';
+import 'package:widget_1/date.dart';
 import 'package:widget_1/dialog.dart';
-import 'dialog.dart';
+import 'package:widget_1/selection.dart';
 
 class ScaffoldWidget extends StatelessWidget {
   const ScaffoldWidget({super.key});
@@ -21,25 +23,33 @@ class ScaffoldWidget extends StatelessWidget {
           icon: Icon(Icons.more_vert),
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 63, 148, 180),
+        backgroundColor: Color.fromARGB(255, 53, 179, 224),
         foregroundColor: Colors.white,
       ),
-      body: Column(
-        children: [
-          const Center(
-            child: Text("NGODING MUMETT BOLOOOOO",
-            style: TextStyle(
-              fontSize: 15,
-              color: Color.fromARGB(255, 133, 132, 132),
-              fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          DialogWidget()
-        ],
-      ),
+      
+      body: ColumnWidget(),
+      //   child: Column(
+      //     children: [
+      //       SizedBox(height: 25),
+      //       Center(
+      //         child: Text("NGODING MUMETT BOLOOOOO",
+      //         style: TextStyle(
+      //           fontSize: 25,
+      //           color: Color.fromARGB(255, 133, 132, 132),
+      //           fontWeight: FontWeight.bold,
+      //           ),
+      //         ),
+      //       ),
+      //       SelectionWidget(),
+      //       DialogWidget(),
+      //       DateWidget(title: "Tanggal widget",
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color.fromARGB(255, 7, 118, 165),
+        selectedItemColor: Colors.cyan,
         unselectedItemColor: Colors.grey,
         currentIndex: 3,
         items: const [

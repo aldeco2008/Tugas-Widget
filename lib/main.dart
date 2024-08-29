@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:widget_1/HomePage.dart';
 import 'package:widget_1/Scaffold_widget.dart';
 import 'package:widget_1/ImageWidget.dart';
+import 'package:widget_1/news_tab.dart';
 import 'package:widget_1/container.dart';
 import 'package:widget_1/date.dart';
 import 'package:widget_1/dialog.dart';
+import 'package:widget_1/aligment.dart';
+import 'package:widget_1/column.dart';
 import 'package:widget_1/selection.dart';
 
 void main() {
@@ -16,14 +20,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner:false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: Color.fromARGB(255, 7, 166, 235)), // Use 0xFF for hex color codes
+            seedColor: Color.fromARGB(255, 48, 182, 240)), // Use 0xFF for hex color codes
         useMaterial3: true,
       ),
-      home:ContainerWidget(),// Use a separate widget for the home screen
-    );
+      home:HomePage(),
+      );
   }
 }
