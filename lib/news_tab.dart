@@ -9,19 +9,19 @@ class NewsTab extends StatelessWidget {
     return ListView(
       children: const [
         NewsItem(
-          imageUrl: "assets/man city.jpg",
+          imageUrl: "assets/tim man city.jpg",
           title: 'Manchester City menurunkan squad rajanya',
           category: 'MAN CITY',
           isCategoryHighlighted: true,
         ),
         NewsItem(
-          imageUrl: 'assets/images/man city champions.jpg',
+          imageUrl: 'assets/images/full tim man city.jpg',
           title: 'Piala ini berharga untuk club Man City',
           date: 'Stadion Etihad, Feb 17, 2023',
           isHorizontalLayout: true,
         ),
         NewsItem(
-          imageUrl: 'assets/images/poster city.jpg',
+          imageUrl: 'assets/images/penonton man city.jpg',
           title: 'CHAMPIONS!!',
           date: 'Stadion Etihad',
           isHorizontalLayout: true,
