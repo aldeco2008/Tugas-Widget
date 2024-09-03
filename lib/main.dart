@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:widget_1/HomePage.dart';
 import 'package:widget_1/Scaffold_widget.dart';
 import 'package:widget_1/ImageWidget.dart';
-import 'package:widget_1/news_tab.dart';
+import 'package:widget_1/TugasAkhir.dart';
 import 'package:widget_1/container.dart';
 import 'package:widget_1/date.dart';
 import 'package:widget_1/dialog.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
             seedColor: Color.fromARGB(255, 48, 182, 240)), // Use 0xFF for hex color codes
         useMaterial3: true,
       ),
-      home:HomePage(),
+      home:TugasAkhirWidget(),
       );
   }
 }
